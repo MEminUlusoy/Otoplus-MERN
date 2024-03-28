@@ -1,0 +1,227 @@
+/*-------------------- FOOTER ---------------------------- */
+
+footer {
+    height: 730px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: #d8d8d8 solid 1px;
+}
+
+
+/*----------- footer top --------------- */
+footer .top {
+    height: 88%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .top .top-inner {
+    height: 100%;
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top .top-inner .logo {
+    height: 35%;
+    width: 100%;
+    display: flex;
+}
+
+footer .top .top-inner .logo .left {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top .top-inner .logo .left img {
+    height: 90px;
+    width: 200px;
+    margin-top: 25px;
+}
+
+footer .top .top-inner .logo .left p {
+    font-size: 14.5px;
+    margin-top: 13px;
+}
+
+
+
+footer .top .top-inner .logo .left p span {
+    color: #ff3f55;
+    font-weight: bold;
+}
+
+footer .top .top-inner .logo .left button {
+    height: 28px;
+    width: 98px;
+    margin-top: 15px;
+    background-color: #eeeeee;
+    color: #333333;
+    padding: 4px 12px;
+    border-radius: 24px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer .top .top-inner .logo .left button:hover {
+    background-color: #ff3f55;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+
+footer .top .top-inner .logo .hrefs {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+footer .top .top-inner .logo .hrefs li {
+    list-style: none;
+    font-size: 14.5px;
+    margin-top: 10px;
+}
+
+footer .top .top-inner .logo .hrefs li:first-child {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+footer .top .top-inner .logo .hrefs li:nth-child(2) {
+    margin-top: 5px;
+}
+
+
+footer .top .top-inner .help {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    padding-top: 23px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+
+footer .top .top-inner .help h1 {
+    font-size: 16px;
+}
+
+
+footer .top .top-inner .help p {
+    font-size: 14.5px;
+    margin-top: 10px;
+}
+
+
+
+
+footer .top .top-inner .help p span {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer .top .top-inner .help p:nth-child(3) {
+    margin-left: 10px;
+}
+
+footer .top .top-inner .warning {
+    height: 37%;
+    width: 100%;
+}
+
+footer .top .top-inner .warning h1 {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+footer .top .top-inner .warning p {
+    font-size: 14.5px;
+    margin-top: 10px;
+}
+
+footer .top .top-inner .extra {
+    height: 8%;
+    width: 100%;
+    display: flex;
+    border-top: #d8d8d8 solid 1px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 7px;
+}
+
+footer .top .top-inner .extra h1 {
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+footer .top .top-inner .extra p {
+    font-size: 13px;
+    background-color: #eeeeee;
+    color: #333333;
+    padding: 5px 12px;
+    border-radius: 10px;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+footer .top .top-inner .extra p:hover {
+    background-color: #ff3f55;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+/*----------- footer bottom --------------- */
+
+footer .bottom {
+    height: 12%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+footer .bottom .icon-container {
+    height: 100%;
+    width: 62%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .bottom .icon-container .left {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+footer .bottom .icon-container .left p {
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+}
+
+footer .bottom .icon-container .right {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
