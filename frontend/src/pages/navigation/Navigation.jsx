@@ -10,8 +10,8 @@ const Navigation = () => {
                 </div>
                 <div className="middle">
                     <ul>
-                        <li><a href="/carlist">Al</a></li>
-                        <li><a href="/sell">Sat</a></li>
+                        <li><a href="/cars/carlist">Al</a></li>
+                        <li><a href="/cars/sell">Sat</a></li>
                         <li><a href="#">Takas</a></li>
                         <li><a href="#">Nasıl Çalışır?</a></li>
                         <li><a href="#">Otomag</a></li>

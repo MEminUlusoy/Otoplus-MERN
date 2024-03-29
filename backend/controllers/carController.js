@@ -39,10 +39,7 @@ const getAllCars = async (req,res) => {
 const getACar = async (req,res) => {
     try {
         const car = await Car.findById({_id: req.params.id})
-        res.status(200).json({
-            succeded: true,
-            car
-        })
+        res.status(200).json(car)
     } catch (error) {
         req.status(500).json({
             succeded: false,
