@@ -20,7 +20,7 @@ const PriceCar = ({car}) => {
                     <h1 className='font-bold font-f1 text-xl text-[#848584] '>ELITE</h1>
                 </div>
                 <div className='w-full h-[21%]  flex justify-center items-center  '>
-                    <h1 className='font-bold font-f1 text-4xl  text-[#000000] '>{car.price} TL</h1>
+                    <h1 className='font-bold font-f1 text-3xl  text-[#000000] '>{car.price && car.price.toLocaleString()} TL</h1>
                 </div>
                 <div className='w-full h-[35%]  flex justify-center items-center border-t border-gray-300 '>
                     <button className='h-[50%] w-[80%] font-bold bg-[#4bce49] hover:bg-[#39bb37]  text-[#FFFFFF] rounded-full '>Hemen Al</button>

@@ -30,7 +30,16 @@ const carSchema = new Schema({
     price: {
         type: Number,
         required: true
-    }
+    },
+    plate: {
+        type: String,
+        required: true
+    },
+    color: {
+        type: String,
+        required: true
+    },
+    
 },{
 
     timestamps: true

@@ -15,6 +15,9 @@ import PriceCar from './PriceCar';
 
 const ShowCar = () => {
 
+    
+    const [value, setValue] = useState(0);
+
     const [car, setCar] = useState({});
     const [loading, setLoading] = useState(false);
     const { id } = useParams();
@@ -48,10 +51,10 @@ const ShowCar = () => {
                                     <p className=' text-black font-bold text-base tracking-tight'>Araç Hakkında</p>
                                 </div>
                                 <div className='group cursor-pointer h-full  w-[18%] flex items-center justify-center   hover:border-b-2  border-[#FF3F55]'>
-                                    <p className='text-base tracking-tight group-hover:text-black group-hover:font-bold text-gray-500 font-normal hover:transition duration-150 ease-in'>Hasar Bilgisi</p>
+                                    <a href='#eksp' className='text-base tracking-tight group-hover:text-black group-hover:font-bold text-gray-500 font-normal hover:transition duration-150 ease-in'>Hasar Bilgisi</a>
                                 </div>
                                 <div className='group cursor-pointer h-full  w-[18%] flex items-center justify-center   hover:border-b-2 border-[#FF3F55] '>
-                                    <p className='text-base tracking-tight group-hover:text-black group-hover:font-bold   text-gray-500 hover:transition duration-150 ease-in'>Araç Özellikleri</p>
+                                    <a href='#eksp' className='text-base tracking-tight group-hover:text-black group-hover:font-bold   text-gray-500 hover:transition duration-150 ease-in'>Araç Özellikleri</a>
                                 </div>
                             </div>
 
@@ -89,10 +92,10 @@ const ShowCar = () => {
 
                         {/* Image Container */}
                         <div className='bg-[#FFFFFF]  col-span-6 row-span-5 flex flex-col'>
-                            <div className='w-full h-[80%] border border-red-500 '>
+                            <div className='w-full h-[80%]  '>
                                 <img className='h-full w-full object-cover' src="https://dat-tr-prda-ops-vava.azureedge.net/cars/153918/resizedimages/82fe16dfc7824e91b9203f220075b8e3_vdp_mob.webp" alt="" />
                             </div>
-                            <div className='w-full h-[20%] border border-green-500 '>
+                            <div className='w-full h-[20%] '>
 
                             </div>
                         </div>
@@ -119,7 +122,7 @@ const ShowCar = () => {
 
 
                         {/* Advert Container */}
-                        <div className='bg-[#FFFFFF]  col-span-6 row-span-1 flex'>
+                        <div id="eksp" className='bg-[#FFFFFF]  col-span-6 row-span-1 flex'>
                             <div className='h-full w-1/3 border-r border-gray-300 flex justify-start  items-center'>
                                 <img className="h-full w-1/2 object-scale-down " src="https://www.otoplus.com/assets/img/badges/new/3-2.png" alt="" />
                                 <p className='text-lg'>20 gün <br /> <span className='font-bold'>İade Hakkı</span></p>
@@ -135,7 +138,45 @@ const ShowCar = () => {
                         </div>
 
                         {/* Ekspertiz  */}
-                        <div className='border border-gray-500 col-span-6 row-span-5'></div>
+                        <div  className=' col-span-6 row-span-5 flex flex-col'>
+                            <div className='bg-[#FFFFFF]   w-full h-[12%] border-b border-gray-300 pl-5 pt-3'>
+                                <h1 className='font-semibold text-2xl'>Ekspertiz</h1>
+                            </div>
+                            <div className='  w-full h-[88%]  flex'>
+                                <div className=' bg-[#FFFFFF] h-full w-[40%]  flex flex-col py-5'>
+                                    <img className='h-[85%] w-full object-scale-down ' src="https://cdn.otoplus.com/assets-1711703948901/img/expertise-v3@2x.png" alt="" />
+                                    <div className=' w-full h-[15%]  flex justify-center items-center'>
+                                        <div className='rounded-full h-[35px] w-[35px] bg-[#2681E8] flex items-center justify-center  text-[#FFFFFF] ml-5 font-bold'>B</div>
+                                        <p className='text-sm ml-2 text-gray-400 font-thin'>Boyalı</p>
+                                        <div className='rounded-full h-[35px] w-[35px] bg-[#FF5914] flex items-center justify-center text-[#FFFFFF] ml-5 font-bold'>D</div>
+                                        <p className='text-sm ml-2 text-gray-400 font-thin'>Değişen</p>
+                                    </div>
+                                </div>
+                                <div className='h-full w-[60%] p-5'>
+                                    <div className='w-full h-[20%]  border-b border-gray-300 flex'>
+                                        <div onClick={()=>setValue(0)} className={`group w-1/3 h-full  flex items-center justify-center ${value === 0 && `border-b-2  border-[#FF3F55]`} hover:border-b-2  border-[#FF3F55] cursor-pointer `}>
+                                            <p className={` group-hover:text-black ${value === 0 ? `font-bold text-black` : `text-gray-500 font-normal `}  text-base tracking-tight group-hover:font-bold  hover:transition duration-150 ease-in`}>Araç Dışı</p>
+                                        </div>
+                                        <div  onClick={()=>setValue(1)} className={`group w-1/3 h-full flex items-center justify-center ${value === 1 && `border-b-2  border-[#FF3F55]`}  hover:border-b-2  border-[#FF3F55] cursor-pointer`}>
+                                            <p className={` group-hover:text-black ${value === 1 ? `font-bold text-black` : `text-gray-500 font-normal `}  text-base tracking-tight group-hover:font-bold  hover:transition duration-150 ease-in`}>Araç İçi</p>
+                                        </div>
+                                        <div onClick={()=>setValue(2)} className={`group w-1/3 h-full flex items-center justify-center  ${value === 2 && `border-b-2  border-[#FF3F55]`}  hover:border-b-2  border-[#FF3F55] cursor-pointer`}> 
+                                            <p className={` group-hover:text-black ${value === 2 ? `font-bold text-black` : `text-gray-500 font-normal `}  text-base tracking-tight group-hover:font-bold  hover:transition duration-150 ease-in`}>Motor & Mekanik </p>
+                                        </div>
+                                    </div>
+                                    <div  className='w-full h-[80%] '>
+                                        <div className='bg-[#FFFFFF] w-full h-[15%] flex items-center justify-center mt-5 border border-gray-300'>
+                                            
+                                            {  value === 0 && <p className='font-semibold text-base'>Araç dışında herhangi bir hasar bulunmamaktadır.</p>     }
+                                            {  value === 1 && <p className='font-semibold text-base'>Araç içinde herhangi bir hasar bulunmamaktadır.</p>      } 
+                                            {  value === 2 && <p className='font-semibold text-base'>Araç mekaniğinde herhangi bir hasar yoktur.</p> } 
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
 

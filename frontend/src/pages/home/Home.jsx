@@ -1,8 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./home.css"
 import { FaCar } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+
+    const [brand, setBrand] = useState("")
+    const [model, setModel] = useState("")
+    const [modelYear, setModelYear] = useState(undefined)
+
+    const navigate = useNavigate()
+    
+    const sendValue = {
+        brand,
+        model,
+        modelYear
+    }
+
     return (
         <div>
 
@@ -25,30 +39,64 @@ const Home = () => {
                                     <p>Satmak istediğin aracın bilgilerini seç</p>
                                 </div>
                                 <div className="pricing-inner-middle">
-                                    <select required defaultValue={'defaultYear'}   className="year" name="year" id="year">
-                                        <option value="defaultYear" disabled  hidden>Model Yılı</option>
-                                        <option value="year1">2022</option>
-                                        <option value="year2">2021</option>
-                                        <option value="year3">2020</option>
-                                        <option value="year4">2019</option>
+
+                                    <select
+                                        required   
+                                        className="year" 
+                                        name="year" 
+                                        id="year"
+                                        value={modelYear}
+                                        onChange={(e) => setModelYear(e.target.value) }
+                                    >
+                                        <option value="defaultYear"  hidden>Model Yılı</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
                                     </select>
-                                    <select required defaultValue={'defaultBrand'} className="brand" name="cars" id="cars">
-                                        <option value="defaultBrand" disabled  hidden>Marka</option>
-                                        <option value="volvo">Volvo</option>
-                                        <option value="bmw">BMW</option>
-                                        <option value="mercedes">Mercedes</option>
-                                        <option value="audi">Audi</option>
+
+
+                                    <select 
+                                        required 
+                                        className="brand" 
+                                        name="cars" 
+                                        id="cars"
+                                        value={brand}
+                                        onChange={(e) => setBrand(e.target.value)}
+                                    >
+                                        <option value="defaultBrand"   hidden>Marka</option>
+                                        <option value="Volvo">Volvo</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Opel">Opel</option>
+                                        <option value="Audi">Audi</option>
                                     </select>
-                                    <select required defaultValue={'defaultModel'} className="model" name="model" id="model">
-                                        <option value="defaultModel" disabled  hidden>Model</option>
-                                        <option value="corolla">Corolla</option>
-                                        <option value="egea">Egea</option>
-                                        <option value="meriva">Meriva</option>
-                                        <option value="passat">Passat</option>
+
+
+                                    <select 
+                                        required  
+                                        className="model" 
+                                        name="model" 
+                                        id="model"
+                                        value={model}
+                                        onChange={(e) => setModel(e.target.value) }
+                                    >
+                                        <option value="defaultModel"   hidden>Model</option>
+                                        <option value="XC90">XC90</option>
+                                        <option value="5.20">5.20</option>
+                                        <option value="Meriva">Meriva</option>
+                                        <option value="A6">A6</option>
                                     </select>
+
+
                                 </div>
                                 <div className="pricing-inner-bottom">
-                                    <button>Ön fiyat teklifi al</button>
+                                    <button onClick={() => {
+                
+                                        navigate("/cars/sell", {state: sendValue})
+                                        
+                                    }}>
+                                        Ön fiyat teklifi al
+                                    </button>
                                     <p>Aracımı yukarıda bulamıyorum</p>
                                 </div>
                                 <div className="pricing-inner-icon">

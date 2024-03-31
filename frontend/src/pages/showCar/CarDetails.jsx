@@ -50,7 +50,7 @@ const CarDetails = ({car}) => {
                             <p className='text-sm text-gray-700 font-semibold ml-2'>KM</p>
                         </div>
                         <div className='h-full w-1/2  flex items-center justify-end'>
-                            <p className='text-sm font-bold text-gray-700 mr-2'>{car.km} KM</p>
+                            <p className='text-sm font-bold text-gray-700 mr-2'>{car.km && car.km.toLocaleString()} KM</p>
                         </div>
 
                     </div>
@@ -60,7 +60,7 @@ const CarDetails = ({car}) => {
                             <p className='text-sm text-gray-700 font-semibold ml-2'>Plaka</p>
                         </div>
                         <div className='h-full w-1/2  flex items-center justify-end'>
-                            <p className='text-sm font-bold text-gray-700 mr-2'>35 HC 7034</p>
+                            <p className='text-sm font-bold text-gray-700 mr-2'>{car.plate}</p>
                         </div>
 
                     </div>
@@ -70,7 +70,7 @@ const CarDetails = ({car}) => {
                             <p className='text-sm text-gray-700 font-semibold ml-2'>Renk</p>
                         </div>
                         <div className='h-full w-1/2  flex items-center justify-end'>
-                            <p className='text-sm font-bold text-gray-700 mr-2'>Beyaz</p>
+                            <p className='text-sm font-bold text-gray-700 mr-2'>{car.color}</p>
                         </div>
 
                     </div>
